@@ -47,13 +47,13 @@ readyYesBtn.addEventListener('click', () => {
 
 const surprisesBtns= [
     { btn:
-        document.getElementById('surprise1Btn'), opened: false },
+        document.getElementById('surprise1Btn'), page: 'surprise1Page' },
         { btn:
-            document.getElementById('surprise2Btn'), opened: false },
+            document.getElementById('surprise2Btn'), page: 'surprise2Page' },
             { btn:
-                document.getElementById('surprise3Btn'), opened: false },
+                document.getElementById('surprise3Btn'), page: 'surprise3Page' },
                 { btn:
-                    document.getElementById('surprise4Btn'), opened: false },
+                    document.getElementById('surprise4Btn'), page: 'surprise4Page' },
 ];
 
 surprisesBtns.forEach(s => {
