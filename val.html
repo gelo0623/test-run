@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For My Valentine</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <video autoplay muted loop id="bgVideo">
+        <source src="assets/background.mp4" type="video/mp4">
+    </video>
+
+    
+    <audio autoplay loop id="bgAudio">
+        <source src="assets/mahika.mp3" type="audio/mp3">
+    </audio>
+
+
+
+    <!--INTRO-->
+    <div class="screen active" id="introPage">
+        <div class="content">
+            <h1>FOR MY VALENTINE❤️,<br>ALWAYS</h1>
+            <button class="pulse-btn" id="playTogetherBtn">❤️ PLAY ❤️<br>TOGETHER</button>
+        </div>
+    </div>
+
+    <!--READy PAGE-->
+    <div class="screen" id="readyPage">
+        <div class="content">
+            <h1>I HAVE 4 SURPRISES FOR YOU.<br>ARE YOU READY?</h1>
+            <button class="pulse-btn" id="readyYesBtn">❤️ YES ❤️</button>
+        </div>
+    </div>
+
+    <!--SUrprise Page-->
+    <div class="screen" id="surprisesPage">
+        <div class="content">
+            <h1>CHOOSE YOUR SURPRISE❤️</h1>
+
+            <div class="surprise-grid">
+                <div class="surprise" id="surprise1Btn">
+                    <img src="assets/surp1.gif" alt="Surprise 1">
+                    <p>Surprise 1❤️</p>
+                </div>
+
+                <div class="surprise" id="surprise2Btn">
+                    <img src="assets/surp2.gif" alt="Surprise 2">
+                    <p>Surprise 2❤️</p>
+                </div>
+
+                <div class="surprise" id="surprise3Btn">
+                    <img src="assets/surp3.gif" alt="Surprise 3">
+                    <p>Surprise 3❤️</p>
+                </div>
+
+                <div class="surprise" id="surpris4Btn">
+                    <img src="assets/surp4.gif" alt="Surprise 4">
+                    <p>Surprise 4❤️</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--INDIVE SURP-->
+    <div class="screen" id="surprise1Page">
+        <div class="content">
+            <h1>Surprise 1 MY LETTER</h1>
+            <p> HERE LETTER </p>
+            <button class="pulse-btn backBtn">Back</button> 
+        </div>
+    </div>
+
+    <div class="screen" id="surprise2Page">
+        <div class="content">
+            <h1>Surprise 2 SONGS THAT REMINDS ME OF YOU</h1>
+            <p> (spotify embbed + vinyl) </p>
+            <button class="pulse-btn backBtn">Back</button> 
+        </div>
+    </div>
+
+    <div class="screen" id="surprise3Page">
+        <div class="content">
+            <h1>Surprise 3 THINGS I LOVE/h1>
+            <p> TEXT </p>
+            <button class="pulse-btn backBtn">Back</button> 
+        </div>
+    </div>
+
+    <div class="screen" id="surprise4Page">
+        <div class="content">
+            <h1>Surprise 4 US</h1>
+            <p> PICTURE </p>
+            <button class="pulse-btn backBtn">Back</button> 
+        </div>
+    </div>
+
+
+    <div class="screen" id="valentinePage">
+        <div class="content">
+            <h1>Will you be my,<br>Valentine?❤️</h1>
+
+            <button class="pulse-btn" id="yesBtn">❤️ YES ❤️</button>
+            <button class="pulse-btn" id="noBtn">💔 NO 💔</button>
+        </div>
+    </div>
+
+    <!-- Floating hearts -->
+    <div class="heart" style="left: 10%;">❤️</div>
+    <div class="heart" style="left: 30%;">❤️</div>
+    <div class="heart" style="left: 50%;">❤️</div>
+    <div class="heart" style="left: 70%;">❤️</div>
+    <div class="heart" style="left: 90%;">❤️</div>
+
+    <script src="function.js"></script>
+</body>
+</html>
