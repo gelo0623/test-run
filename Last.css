@@ -1,0 +1,38 @@
+.memoryGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.memoryPic {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #FF69B4;
+    box-shadow: 0 0 15px rgba(255,105,180,0.6);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards;
+}
+
+/* stagger animation */
+.memoryPic:nth-child(1) { animation-delay: 0.3s; }
+.memoryPic:nth-child(2) { animation-delay: 0.6s; }
+.memoryPic:nth-child(3) { animation-delay: 0.9s; }
+.memoryPic:nth-child(4) { animation-delay: 1.2s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* optional floating effect */
+.memoryPic:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
