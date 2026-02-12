@@ -1,22 +1,56 @@
-.letterBox {
-    position: relative;  /* absolutely necessary for children to be inside the box */
+/* Vertical scrolling box */
+#loveBox {
     width: 90%;
     max-width: 900px;
-    height: 500px;
+    height: 500px;           /* vertical scroll area */
     margin: 20px auto;
     background-color: rgba(0,0,0,0.7);
     border: 3px solid #FF69B4;
     border-radius: 15px;
-    overflow: hidden;
-    padding: 15px;
+    overflow-y: auto;        /* vertical scroll */
+    overflow-x: hidden;      /* hide horizontal scroll */
+    padding: 20px;
+    position: relative;
     box-sizing: border-box;
+    text-align: center;
 }
 
-.loveText {
-    position: absolute;    /* each word can move freely */
+/* Beat each word vertically */
+#loveBox .loveText {
+    display: block;          /* vertical stacking */
+    margin: 10px 0;          /* space between words */
+    font-size: 18px;
     color: #fff;
-    font-size: 16px;
     font-family: 'Press Start 2P', cursive;
     animation: beat 1s infinite alternate;
-    white-space: nowrap;   /* don’t wrap inside the element */
+}
+
+/* Back button fixed at bottom of box */
+#loveBox .backBtn {
+    position: sticky;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+/* Beat animation */
+@keyframes beat {
+    0% { transform: scale(1);}
+    50% { transform: scale(1.2);}
+    100% { transform: scale(1);}
+}
+
+/* Scrollbar styling */
+#loveBox::-webkit-scrollbar {
+    width: 8px;
+}
+
+#loveBox::-webkit-scrollbar-thumb {
+    background-color: #FF69B4;
+    border-radius: 4px;
+}
+
+#loveBox::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.3);
 }
