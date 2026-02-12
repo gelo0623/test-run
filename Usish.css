@@ -1,0 +1,47 @@
+/* Horizontal scrolling box for loveBox */
+#loveBox {
+    width: 90%;
+    max-width: 900px;
+    height: 120px;           /* adjust height */
+    margin: 20px auto;
+    background-color: rgba(0,0,0,0.7);
+    border: 3px solid #FF69B4;
+    border-radius: 15px;
+    overflow-x: auto;        /* horizontal scroll */
+    overflow-y: hidden;      /* hide vertical scroll */
+    white-space: nowrap;     /* keep content in one line */
+    position: relative;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Horizontal inline loveText */
+#loveBox .loveText {
+    display: inline-block;    /* horizontal line */
+    margin: 0 20px;           /* space between words */
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    animation: beat 1s infinite alternate;
+}
+
+/* Beating animation */
+@keyframes beat {
+    0% { transform: scale(1);}
+    50% { transform: scale(1.2);}
+    100% { transform: scale(1);}
+}
+
+/* Optional scrollbar styling */
+#loveBox::-webkit-scrollbar {
+    height: 8px;
+}
+
+#loveBox::-webkit-scrollbar-thumb {
+    background-color: #FF69B4;
+    border-radius: 4px;
+}
+
+#loveBox::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.3);
+}
